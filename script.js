@@ -28,6 +28,7 @@ function validateForm(){
   //Recieving the response and making use of it
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('loading').innerHTML="Finding availabe slots.........";
 
       //Assigning the parsed response to a variable
       var data = JSON.parse(this.responseText);
@@ -50,11 +51,13 @@ function validateForm(){
             var audio = new Audio('FadedGuitar.mp3');
             audio.play();
 
-
           }
+
         }
       }
 
+    }else {
+      document.getElementById('loading').innerHTML="";
     }
   };
 
