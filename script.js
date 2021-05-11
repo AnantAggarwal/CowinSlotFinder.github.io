@@ -1,5 +1,10 @@
-//Variable to stop the function
-var MyVar = setInterval(validateForm,60000);
+//Declaration of MyVar
+var MyVar;
+//The function will be triggered on clicking the submit button
+function OnSubmit(){
+  validateForm();
+  MyVar = setInterval(validateForm,5000);
+}
 
 //This Function will run when the submit button is clicked.
 function validateForm(){
@@ -63,4 +68,8 @@ function validateForm(){
 
 
 
+}
+function onStop() {
+  clearInterval(MyVar);
+  document.getElementById('loading').innerHTML="";
 }
