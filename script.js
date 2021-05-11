@@ -55,7 +55,7 @@ function validateForm(){
             console.log("Hurry there is a slot available");
             var audio = new Audio('FadedGuitar.mp3');
             audio.play();
-
+            console.log(data);
           }
 
         }
