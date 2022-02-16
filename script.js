@@ -53,8 +53,8 @@ function validateForm(){
           //Checking if a particular session is available
           if(data.centers[a].sessions[b].available_capacity != 0){
             console.log("Hurry there is a slot available");
-            var audio = new Audio('FadedGuitar.mp3');
-            audio.play();
+            //var audio = new Audio('FadedGuitar.mp3');
+            //audio.play();
             console.log(data);
           }
 
